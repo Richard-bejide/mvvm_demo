@@ -17,8 +17,11 @@ class UserServices {
       }
       return Failure(response: 'invalid response', code: invalidResponse);
     } on HttpException {
-      return Failure(response: 'No internet', code: noInternet);
-    } on FormatException {
+      return Failure(response: 'No internet connection', code: noInternet);
+    } on SocketException {
+      return Failure(response: 'No internet connection', code: noInternet);
+    }
+     on FormatException {
       return Failure(response: 'Invalid format', code: invalidFormat);
     } catch (e) {
       return Failure(response: 'Unknown error', code: unknownError);

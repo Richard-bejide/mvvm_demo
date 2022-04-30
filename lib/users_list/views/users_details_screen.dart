@@ -14,9 +14,9 @@ class UserDetailsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(usersViewModel.selectedUser.name,
+            Text(usersViewModel.selectedUser.name!,
                 style: const TextStyle(color: Colors.black)),
-            Text(usersViewModel.selectedUser.email,
+            Text(usersViewModel.selectedUser.email!,
                 style: const TextStyle(color: Colors.grey))
           ]),
     );
