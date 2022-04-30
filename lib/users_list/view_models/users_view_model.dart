@@ -7,13 +7,13 @@ import 'package:mvvm_demo/users_list/repo/user_services.dart';
 class UsersViewModel extends ChangeNotifier {
   bool _loading = false;
   List<UserModel> _userListModel = [];
-  UserError? _userError;
+  UserError _userError = UserError();
   UserModel? _selectedUser;
   UserModel _addingUser = UserModel();
 
   bool get loading => _loading;
   List<UserModel> get userListModel => _userListModel;
-  UserError get userError => _userError!;
+  UserError get userError => _userError;
   UserModel get selectedUser => _selectedUser!;
   UserModel get addingUser => _addingUser;
 
